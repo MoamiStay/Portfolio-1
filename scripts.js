@@ -1,13 +1,11 @@
 const img = document.querySelectorAll("#carousel > a > img");
 const leftArrow = document.querySelector("#left");
 const rightArrow = document.querySelector("#right");
-// const radioWoodz = document.querySelector("#woodz");
-// const radioMuseum = document.querySelector("#museum");
-// const radioRainy = document.querySelector("#rainydays");
+const texts = [document.querySelector("#woodzTxt"), document.querySelector("#museumTxt"), document.querySelector("#rainydaysTxt")]
 const radios = [document.querySelector("#woodz"), document.querySelector("#museum"), document.querySelector("#rainydays")];
-radios[0].checked = true;
 let currentPos = 0;
 let counter = 0;
+radios[0].checked = true;
 
 rightArrow.addEventListener("click", toRight);
 leftArrow.addEventListener("click", toLeft);
@@ -15,12 +13,29 @@ radios[0].addEventListener("click", woodz);
 radios[1].addEventListener("click", museum);
 radios[2].addEventListener("click", rainydays);
 
+const test = [rightArrow, leftArrow, radios[0], radios[1], radios[2]];
+test.forEach(item => {
+    item.addEventListener("click", txtMatch)
+});
+
+
+function txtMatch() {
+    for(let i = 0; i < texts.length; i++) {
+    if(texts[i] !== texts[counter]) {
+        texts[i].classList.add("hidden");
+    } if(texts[i] === texts[counter]) {
+        texts[i].classList.remove("hidden");
+        texts[counter].classList.add("fadeIn");
+    }
+}
+};
+
 function toRight() {
     leftArrow.disabled = false;
     counter = counter+1;
     currentPos = currentPos - 65;
-    console.log(counter);
-    console.log(currentPos + "right");
+    // console.log(counter);
+    // console.log(currentPos + "right");
     for(item of img) {
         if(currentPos <= -130) {rightArrow.disabled = true};
         item.style.webkitTransform = `translateX(${currentPos}vw)`;
@@ -33,8 +48,8 @@ function toLeft() {
     rightArrow.disabled = false;
     counter = counter-1;
     currentPos = currentPos + 65;
-    console.log(counter);
-    console.log(currentPos + "left");
+    // console.log(counter);
+    // console.log(currentPos + "left");
     for(item of img) {
         if(currentPos >= 0) {leftArrow.disabled = true};
             item.style.webkitTransform = `translateX(${currentPos}vw)`
@@ -43,8 +58,9 @@ function toLeft() {
     return counter, currentPos;
 };
 
-// for-loop/forEach --> run though *radios and add addEventlistener().
 
+// should change to:
+// for-loop/forEach --> run though *radios and add addEventlistener().
 function woodz() {
     rightArrow.disabled = false;
     counter = 0;
@@ -68,7 +84,7 @@ function museum() {
     };
     radios[counter].checked = true;
     return counter, currentPos;
-}
+};
 
 function rainydays() {
     leftArrow.disabled = false;
@@ -80,4 +96,4 @@ function rainydays() {
     };
     radios[counter].checked = true;
     return counter, currentPos;
-}
+};

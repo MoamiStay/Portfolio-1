@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Regine</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
     <script
       src="https://kit.fontawesome.com/7298bdb0c3.js"
       crossorigin="anonymous"
     ></script>
+
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js" defer></script>
   </head>
@@ -16,7 +25,7 @@
   <body>
     <header class="horizontal">
       <div id="logo" class="horizontal">
-        <img src="media/nagisaaa.jpg" alt="profile picture" />
+        <img src="media/Bilde1.png" alt="profile picture" />
         <h2>REGINE NAAS</h2>
       </div>
       <nav>
@@ -28,15 +37,28 @@
     </header>
 
     <main>
-      <h1>My Work</h1>
+      <h2>My works</h2>
       <div id="carousel" class="horizontal">
-        <a href="#" id="woodzImg"><img src="media/woodz.jpg" alt="" /></a>
-        <a href="#" id="museumImg"><img src="media/museum.jpg" alt="" /></a>
-        <a href="#" id="rainydaysImg"
+        <a
+          href="https://woodz.netlify.app/index.html"
+          target="_blank"
+          id="woodzImg"
+          ><img src="media/woodz.jpg" alt=""
+        /></a>
+        <a
+          href="https://moami-museum.netlify.app/index.html"
+          target="_blank"
+          id="museumImg"
+          ><img src="media/museum.jpg" alt=""
+        /></a>
+        <a
+          href="https://moami-rainydays.netlify.app/"
+          target="_blank"
+          id="rainydaysImg"
           ><img src="media/rainydays.jpg" alt=""
         /></a>
       </div>
-      <div class="horizontal">
+      <div class="horizontal block">
         <button id="left" type="button">
           <i class="fa fa-solid fa-caret-left"></i>
         </button>
@@ -50,8 +72,8 @@
     </main>
 
     <aside>
-      <section id="woodz">
-        <h2>WOODZ</h2>
+      <section id="woodzTxt">
+        <h1>WOODZ</h1>
         <h3>TASK</h3>
         <p>
           To create a blog (any topic of your choice) where you pulled data from
@@ -79,8 +101,8 @@
           architecto doloribus consequatur deleniti dolor adipisci fugit.
         </p>
       </section>
-      <section id="museum" class="hidden"><h2>MUSEUM</h2></section>
-      <section id="rainydays" class="hidden"><h2>RAINY DAYS</h2></section>
+      <section id="museumTxt" class="hidden"><h1>MUSEUM</h1></section>
+      <section id="rainydaysTxt" class="hidden"><h1>RAINY DAYS</h1></section>
     </aside>
   </body>
 </html>

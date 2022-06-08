@@ -1,19 +1,45 @@
+:root {
+    --logo: rgb(252, 239, 239);
+    --text: rgb(255, 245, 245);
+    --body: rgb(53, 53, 54);
+    --aside: rgb(61, 61, 62);
+    --radio: #ffffff;
+    --woodz-orange: #f76902;
+}
+
 body {
-    background-color: rgb(233, 233, 255);
+    background-color: var(--body);
     margin: 0;
     display: grid;
-    grid-template-columns: 65% auto ;
+    grid-template-columns: 65% auto;
     height: 100vh;
+}
+
+h1 {
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-top: 30px;
+}
+
+h2, h3, p, a {
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
     position: fixed;
-    width: 65%;
+    width: 100%;
+    z-index: 3;
+    background-color: #5e375a;
     justify-content: space-between;
+    box-shadow: 0px 10px 15px rgb(40, 40, 40);
 }
 
 #logo {
     padding: 10px;
+    font-family: 'Kaisei Decol', serif;
+    align-items: center;
 }
 
 #logo img {
@@ -23,12 +49,22 @@ header {
     margin-right: 5px;
 }
 
+nav {
+    display: flex;
+}
+
+nav ul {
+    align-items: center;
+    margin-right: 30px;
+}
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
+    margin-top: 100px;
 }
 
 #carousel {
@@ -44,16 +80,16 @@ main {
 }
 
 aside {
-    background-color: azure;
+    background-color: var(--aside);
     overflow-y: scroll;
-    font-size: 1.5rem;
-    padding: 15px 15px 15px 15px;
+    font-size: 1rem;
+    padding: 30px;
+    margin-top: 90px;
 }
 
 li a, li {
     text-decoration: none;
     list-style-type: none;
-    color: black;
     padding: 10px;
 }
 
@@ -65,10 +101,26 @@ li a, li {
     display: flex;
 }
 
-/* input[type="radio"]:checked + label {
-    background-color: red;
-    border: 2px solid red;
-} */
+#right, #left {
+    background-color: transparent;
+    border: none;
+}
+
+.block {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+}
+
+i {
+    cursor: pointer;
+    margin: 0 20px 0 20px;
+    display: block;
+    color: var(--text);
+  font-size: 4rem;  
+}
+
 
 input[type="radio"] {
     /* -webkit-appearance: none; */
@@ -76,10 +128,10 @@ input[type="radio"] {
     background-color: transparent;
     margin: 10px;
     font: inherit;
-    color: currentColor;
+    color: var(--radio);
     width: 0.8em;
     height: 0.8em;
-    border: 0.06em solid currentColor;
+    border: 0.06em solid var(--radio);
     border-radius: 50%;
     cursor: pointer;
     /* transform: translateY(-0.075em); */
@@ -91,3 +143,22 @@ input[type="radio"]:checked {
     background-color: currentColor;
 }
 
+::-webkit-scrollbar {width: 8px;}
+
+::-webkit-scrollbar-thumb {background: #d9d9d9;
+border-radius: 4px;}
+
+::-webkit-scrollbar-track {
+    background: #535353;
+    border-radius: 4px;}
+
+
+    @keyframes fadeIn {
+        0% {opacity: 0}
+        100% {opacity: 1}
+       }
+    
+    .fadeIn {
+        animation: fadeIn 1s linear;
+    }
+    
