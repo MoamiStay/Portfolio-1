@@ -19,14 +19,15 @@
     ></script>
 
     <link rel="stylesheet" href="styles.css" />
-    <script src="scripts.js" defer></script>
+    <script id="script-desk" src="scripts.js" defer></script>
+    <script id="script-desk" src="mob.js" defer></script>
   </head>
 
   <body>
     <header class="horizontal">
       <div id="logo" class="horizontal">
-        <img src="media/Bilde1.png" alt="profile picture" />
-        <h2>REGINE NAAS</h2>
+        <img src="media/regine-logo2.png" alt="profile picture" />
+        <h4>REGINE NAAS</h4>
       </div>
       <nav>
         <ul class="horizontal">
@@ -37,7 +38,7 @@
     </header>
 
     <main>
-      <h2>My works</h2>
+      <!-- <h2>My works</h2> -->
       <div id="carousel" class="horizontal">
         <a
           href="https://woodz.netlify.app/index.html"
@@ -66,6 +67,39 @@
         <input type="radio" id="museum" name="pages" value="museum" />
         <input type="radio" id="rainydays" name="pages" value="rainydays" />
         <button id="right" type="button">
+          <i class="fa fa-solid fa-caret-right"></i>
+        </button>
+      </div>
+
+      <!-- carousel for mobile -->
+      <div id="carousel-mob" class="horizontal">
+        <a
+          href="https://woodz.netlify.app/index.html"
+          target="_blank"
+          id="woodzImg-mob"
+          ><img src="media/woodz.jpg" alt=""
+        /></a>
+        <a
+          href="https://moami-museum.netlify.app/index.html"
+          target="_blank"
+          id="museumImg-mob"
+          ><img src="media/museum.jpg" alt=""
+        /></a>
+        <a
+          href="https://moami-rainydays.netlify.app/"
+          target="_blank"
+          id="rainydaysImg-mob"
+          ><img src="media/rainydays.jpg" alt=""
+        /></a>
+      </div>
+      <div class="horizontal-mob block-mob">
+        <button id="left-mob" type="button">
+          <i class="fa fa-solid fa-caret-left"></i>
+        </button>
+        <input type="radio" id="woodz-mob" name="pages" value="woodz" />
+        <input type="radio" id="museum-mob" name="pages" value="museum" />
+        <input type="radio" id="rainydays-mob" name="pages" value="rainydays" />
+        <button id="right-mob" type="button">
           <i class="fa fa-solid fa-caret-right"></i>
         </button>
       </div>
