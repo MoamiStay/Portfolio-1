@@ -6,7 +6,7 @@ const radiosMob = [document.querySelector("#woodz-mob"), document.querySelector(
 let currentPosMob = 0;
 let counterMob = 0;
 leftArrowMob.disabled = true;
-radiosMob[0].checked = true;
+// radiosMob[0].checked = true;
 
 rightArrowMob.addEventListener("click", toRightMob);
 leftArrowMob.addEventListener("click", toLeftMob);

@@ -6,7 +6,7 @@ const radios = [document.querySelector("#woodz"), document.querySelector("#museu
 let currentPos = 0;
 let counter = 0;
 leftArrow.disabled = true;
-radios[0].checked = true;
+// radios[0].checked = true;
 
 rightArrow.addEventListener("click", toRight);
 leftArrow.addEventListener("click", toLeft);
