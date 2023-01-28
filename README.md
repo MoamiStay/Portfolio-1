@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Portfolio 1
 
 ![Momifolio](./media/momifolio.jpg "Momifolio")  
@@ -25,14 +24,6 @@ Your goal should be to present each projects and give a brief summary of what th
 ---
 
 # Sources
-=======
-# portfolio1
-This is not a final portfolio, but rather a summary of my work so far. 
 
-# Task
-Create a website that displays some of the projects you have been working on during the course of this semester. Give a short brief about the projects, the technologies used and your thoughts on them now. 
-
->>>>>>> 2fa9caf30cc862a289da228dcc5975b85a8c3c33
-
-custum radiobuttons
+custom radiobuttons
 https://moderncss.dev/pure-css-custom-styled-radio-buttons/
